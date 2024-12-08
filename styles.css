@@ -1,0 +1,179 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5); /* Fondo degradado */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 500px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Títulos */
+h1 {
+    font-size: 2.5rem;
+    color: #007bff; /* Color azul vibrante */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    color: #4caf50; /* Verde moderno */
+    margin-bottom: 10px;
+}
+
+/* Tarjetas */
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    margin: 20px 0;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Grupos de entrada */
+.inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.input-group {
+    flex: 1;
+    min-width: 100%;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-weight: bold;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Botones */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.buttons button {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+#borrar {
+    background-color: #ff6b6b; /* Rojo vibrante */
+}
+
+#borrar:hover {
+    background-color: #e74c3c;
+    transform: scale(1.05);
+}
+
+#generar {
+    background-color: #4caf50; /* Verde moderno */
+}
+
+#generar:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+}
+
+#resultado {
+    width: 100%;
+    height: 200px;
+    padding: 12px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    border: 2px solid #000; /* un borde más grueso y oscuro */
+    border-radius: 8px;
+    background-color: #f7f9fc;
+    resize: none;
+    box-sizing: border-box;
+    overflow-y: auto;     /* scroll vertical */
+    overflow-x: hidden;   /* sin scroll horizontal */
+    margin-top: 10px;
+    text-align: center;   /* texto centrado */
+    font-weight: bold;    /* texto en negritas */
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+
+
+
+/* Transiciones suaves */
+.card:hover,
+input:focus,
+button:hover {
+    transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .inputs {
+        flex-direction: column;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .buttons button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
